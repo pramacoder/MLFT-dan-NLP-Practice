@@ -1,0 +1,75 @@
+{
+  "length_stats": {
+    "train": {
+      "mean": 15.911333333333333,
+      "median": 12.0,
+      "max": 96,
+      "min": 2,
+      "truncation_pct_128": 0.0
+    },
+    "valid": {
+      "mean": 16.124,
+      "median": 12.0,
+      "max": 96,
+      "truncation_pct_128": 0.0
+    },
+    "test": {
+      "mean": 15.498,
+      "median": 12.0,
+      "max": 74,
+      "truncation_pct_128": 0.0
+    }
+  },
+  "label_frequencies": {
+    "O": 30205,
+    "B-ASPECT": 5300,
+    "B-SENTIMENT": 7264,
+    "I-SENTIMENT": 3249,
+    "I-ASPECT": 1716
+  },
+  "imbalance": {
+    "total_tokens": 47734,
+    "O_tokens": 30205,
+    "non_O_tokens": 17529,
+    "O_percentage": 63.28,
+    "non_O_percentage": 36.72,
+    "O_to_non_O_ratio": 1.72
+  },
+  "span_statistics": {
+    "total_aspect_spans": 5304,
+    "total_sentiment_spans": 7268,
+    "avg_spans_per_review": 4.19,
+    "aspect_single_token_pct": 72.81,
+    "aspect_multi_token_pct": 27.19,
+    "sentiment_single_token_pct": 62.3,
+    "sentiment_multi_token_pct": 37.7
+  },
+  "lexical_markers": {
+    "negations": {
+      "tidak": 1217,
+      "bukan": 17,
+      "kurang": 465,
+      "belum": 47,
+      "tanpa": 18,
+      "tak": 0
+    },
+    "total_negations": 1764,
+    "intensifiers": {
+      "sangat": 384,
+      "banget": 215,
+      "sekali": 104,
+      "terlalu": 77,
+      "cukup": 190,
+      "lumayan": 172,
+      "agak": 183,
+      "bener": 0
+    },
+    "total_intensifiers": 1325
+  },
+  "implications": {
+    "imbalance_implication": "Label 'O' mendominasi dengan 63.3% dari total token (rasio O:non-O = 1.72:1). Akurasi token-level akan menipu; metrik wajib dievaluasi dengan exact-match span Precision, Recall, dan F1 dengan mengabaikan label 'O'.",
+    "truncation_implication": "Dengan MAX_LEN=128, ulasan yang terpotong adalah 0.00% (train) dan 0.00% (val). Panjang median hanya 12 token. Batas 128 aman dan optimal untuk efisiensi komputasi Transformer dan CRF.",
+    "span_length_implication": "Sebanyak 27.19% aspek dan 37.7% sentimen terdiri dari multi-token. Ini mengindikasikan risiko tinggi 'boundary error' (kesalahan menentukan batas awal/akhir span), sehingga transisi BIO (seperti B-X diikuti I-X) dan fitur konteks lokal n-gram sangat krusial.",
+    "lexical_markers_implication": "Ditemukan 1764 kemunculan kata negasi (terbanyak: 'tidak') dan 1325 kata intensifier (terbanyak: 'sangat'). Pada CRF, penambahan fitur leksikal biner (misal `prev_is_negation` atau `curr_is_intensifier`) sangat berpotensi meningkatkan F1 sentimen."
+  }
+}

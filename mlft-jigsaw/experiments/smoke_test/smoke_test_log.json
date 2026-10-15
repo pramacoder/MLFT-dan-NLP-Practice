@@ -1,0 +1,53 @@
+{
+  "status": "PASSED",
+  "train_loss": 0.7048,
+  "val_eval": {
+    "Macro_F1": 0.0,
+    "Micro_F1": 0.0,
+    "Macro_Precision": 0.0,
+    "Macro_Recall": 0.0,
+    "Micro_Precision": 0.0,
+    "Micro_Recall": 0.0,
+    "Hamming_Loss": 0.10416666666666667,
+    "Per_Label": {
+      "toxic": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 3
+      },
+      "severe_toxic": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 0
+      },
+      "obscene": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 2
+      },
+      "threat": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 0
+      },
+      "insult": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 1
+      },
+      "identity_hate": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 0
+      }
+    },
+    "Threshold": 0.5
+  },
+  "model_name": "distilroberta-base"
+}

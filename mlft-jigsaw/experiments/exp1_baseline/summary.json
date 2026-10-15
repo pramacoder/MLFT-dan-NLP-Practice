@@ -1,0 +1,77 @@
+{
+  "exp_name": "exp1_baseline",
+  "max_len": 128,
+  "learning_rate": 3e-05,
+  "epochs": 2,
+  "use_pos_weight": false,
+  "best_macro_f1": 0.2957,
+  "best_val_eval": {
+    "Macro_F1": 0.2957375478927203,
+    "Micro_F1": 0.5641025641025641,
+    "Macro_Precision": 0.32275541795665635,
+    "Macro_Recall": 0.27856800766283524,
+    "Micro_Precision": 0.66,
+    "Micro_Recall": 0.4925373134328358,
+    "Hamming_Loss": 0.028333333333333332,
+    "Per_Label": {
+      "toxic": {
+        "Precision": 0.7894736842105263,
+        "Recall": 0.5172413793103449,
+        "F1": 0.625,
+        "Support": 29
+      },
+      "severe_toxic": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 3
+      },
+      "obscene": {
+        "Precision": 0.6470588235294118,
+        "Recall": 0.6875,
+        "F1": 0.6666666666666666,
+        "Support": 16
+      },
+      "threat": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 1
+      },
+      "insult": {
+        "Precision": 0.5,
+        "Recall": 0.4666666666666667,
+        "F1": 0.4827586206896552,
+        "Support": 15
+      },
+      "identity_hate": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 3
+      }
+    },
+    "Threshold": 0.5
+  },
+  "diagnosis": "Normal convergence (keduanya stabil menurun)",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.2506,
+      "val_loss": 0.1413,
+      "val_macro_f1": 0.0,
+      "val_micro_f1": 0.0,
+      "val_hamming_loss": 0.0372,
+      "epoch_time_sec": 122.6
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.0994,
+      "val_loss": 0.0932,
+      "val_macro_f1": 0.2957,
+      "val_micro_f1": 0.5641,
+      "val_hamming_loss": 0.0283,
+      "epoch_time_sec": 124.0
+    }
+  ]
+}

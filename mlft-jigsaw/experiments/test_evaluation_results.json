@@ -1,0 +1,103 @@
+{
+  "evaluation_timestamp": "2026-09-30 23:20:20",
+  "best_experiment": "exp4_pos_weight",
+  "frozen_threshold": 0.4,
+  "num_test_samples": 100,
+  "total_inference_time_sec": 2.55,
+  "metrics_at_frozen_threshold": {
+    "Macro_F1": 0.4358974358974359,
+    "Micro_F1": 0.6111111111111112,
+    "Macro_Precision": 0.40079365079365076,
+    "Macro_Recall": 0.5277777777777778,
+    "Micro_Precision": 0.5238095238095238,
+    "Micro_Recall": 0.7333333333333333,
+    "Hamming_Loss": 0.023333333333333334,
+    "Per_Label": {
+      "toxic": {
+        "Precision": 0.5714285714285714,
+        "Recall": 0.6666666666666666,
+        "F1": 0.6153846153846154,
+        "Support": 6
+      },
+      "severe_toxic": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 0
+      },
+      "obscene": {
+        "Precision": 0.75,
+        "Recall": 0.75,
+        "F1": 0.75,
+        "Support": 4
+      },
+      "threat": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 0
+      },
+      "insult": {
+        "Precision": 0.75,
+        "Recall": 0.75,
+        "F1": 0.75,
+        "Support": 4
+      },
+      "identity_hate": {
+        "Precision": 0.3333333333333333,
+        "Recall": 1.0,
+        "F1": 0.5,
+        "Support": 1
+      }
+    },
+    "Threshold": 0.4
+  },
+  "metrics_at_default_05": {
+    "Macro_F1": 0.5192307692307693,
+    "Micro_F1": 0.6875,
+    "Macro_Precision": 0.5119047619047619,
+    "Macro_Recall": 0.5277777777777778,
+    "Micro_Precision": 0.6470588235294118,
+    "Micro_Recall": 0.7333333333333333,
+    "Hamming_Loss": 0.016666666666666666,
+    "Per_Label": {
+      "toxic": {
+        "Precision": 0.5714285714285714,
+        "Recall": 0.6666666666666666,
+        "F1": 0.6153846153846154,
+        "Support": 6
+      },
+      "severe_toxic": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 0
+      },
+      "obscene": {
+        "Precision": 0.75,
+        "Recall": 0.75,
+        "F1": 0.75,
+        "Support": 4
+      },
+      "threat": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 0
+      },
+      "insult": {
+        "Precision": 0.75,
+        "Recall": 0.75,
+        "F1": 0.75,
+        "Support": 4
+      },
+      "identity_hate": {
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "Support": 1
+      }
+    },
+    "Threshold": 0.5
+  }
+}

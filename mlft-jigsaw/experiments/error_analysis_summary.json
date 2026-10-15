@@ -1,0 +1,160 @@
+{
+  "total_test_samples": 100,
+  "label_error_stats": {
+    "toxic": {
+      "TP": 4,
+      "FP": 3,
+      "FN": 2,
+      "TN": 91,
+      "False_Positive_Rate": 3.191,
+      "False_Negative_Rate": 33.333
+    },
+    "severe_toxic": {
+      "TP": 0,
+      "FP": 2,
+      "FN": 0,
+      "TN": 98,
+      "False_Positive_Rate": 2.0,
+      "False_Negative_Rate": 0.0
+    },
+    "obscene": {
+      "TP": 3,
+      "FP": 1,
+      "FN": 1,
+      "TN": 95,
+      "False_Positive_Rate": 1.042,
+      "False_Negative_Rate": 25.0
+    },
+    "threat": {
+      "TP": 0,
+      "FP": 1,
+      "FN": 0,
+      "TN": 99,
+      "False_Positive_Rate": 1.0,
+      "False_Negative_Rate": 0.0
+    },
+    "insult": {
+      "TP": 3,
+      "FP": 1,
+      "FN": 1,
+      "TN": 95,
+      "False_Positive_Rate": 1.042,
+      "False_Negative_Rate": 25.0
+    },
+    "identity_hate": {
+      "TP": 1,
+      "FP": 2,
+      "FN": 0,
+      "TN": 97,
+      "False_Positive_Rate": 2.02,
+      "False_Negative_Rate": 0.0
+    }
+  },
+  "base_fp_rate_clean_non_identity": 3.23,
+  "identity_bias_analysis": {
+    "black": {
+      "total_occurrences": 1,
+      "clean_count": 1,
+      "fp_count": 0,
+      "fp_rate_percent": 0.0,
+      "disproportionate_bias_ratio": 0.0
+    }
+  },
+  "text_length_and_truncation_analysis": {
+    "mean_words_all": 57.7,
+    "mean_words_tp_toxic": 19.2,
+    "mean_words_fn_toxic": 159.5,
+    "fn_long_comments_ratio_gt_128_words": 50.0
+  },
+  "qualitative_cases": {
+    "false_positives_benign_overflagged": [
+      {
+        "id": "1c04f1a1a03e0672",
+        "text": "Bblackmoor, I told you to never message me again. You have absolutely no respect for any ethics or propriety. You could not even abide by that simple request. DO NOT WRITE ON MY TALK PAGE EVER AGAIN. I don't want to see your harrassing and condescend...",
+        "true_labels": [],
+        "pred_labels": [
+          "toxic"
+        ],
+        "probs": {
+          "toxic": 0.543,
+          "severe_toxic": 0.051,
+          "obscene": 0.238,
+          "threat": 0.035,
+          "insult": 0.261,
+          "identity_hate": 0.077
+        }
+      },
+      {
+        "id": "2e6d575c6dd22f11",
+        "text": "\" \n :Changing genres without discussion or sources is a practice unfit for Wikipedia. However, #69 should not have caled you a f**king idiot, because that's a personal attack which, on his behalf, was inappropriate. Thank you.  \"",
+        "true_labels": [],
+        "pred_labels": [
+          "toxic",
+          "obscene",
+          "insult"
+        ],
+        "probs": {
+          "toxic": 0.775,
+          "severe_toxic": 0.117,
+          "obscene": 0.53,
+          "threat": 0.067,
+          "insult": 0.517,
+          "identity_hate": 0.172
+        }
+      },
+      {
+        "id": "011b51b386c60373",
+        "text": "they still shouldnt kill a women for a reason like that christains are soppose to be good people.",
+        "true_labels": [],
+        "pred_labels": [
+          "toxic"
+        ],
+        "probs": {
+          "toxic": 0.585,
+          "severe_toxic": 0.059,
+          "obscene": 0.223,
+          "threat": 0.038,
+          "insult": 0.258,
+          "identity_hate": 0.079
+        }
+      }
+    ],
+    "false_negatives_subtle_missed": [
+      {
+        "id": "cbd83ffa0927bc8d",
+        "text": "\" \n\n == Alleged Original Research == \n\n I have added back a load of content that was removed supposedly under the reasoning that it was \"\"original research\"\". First, there was reliably sourced content that was removed. The \"\"Changes in direction\"\" se...",
+        "true_labels": [
+          "toxic"
+        ],
+        "pred_labels": [],
+        "probs": {
+          "toxic": 0.045,
+          "severe_toxic": 0.022,
+          "obscene": 0.022,
+          "threat": 0.032,
+          "insult": 0.024,
+          "identity_hate": 0.024
+        }
+      },
+      {
+        "id": "fc59fc0bc0aeee03",
+        "text": "\" \n :::::::Yeah, I've been there a couple times. Stupid people these days. Pfft.    \"",
+        "true_labels": [
+          "toxic",
+          "obscene",
+          "insult"
+        ],
+        "pred_labels": [],
+        "probs": {
+          "toxic": 0.197,
+          "severe_toxic": 0.023,
+          "obscene": 0.052,
+          "threat": 0.022,
+          "insult": 0.062,
+          "identity_hate": 0.025
+        }
+      }
+    ],
+    "label_conflation_insult_as_general_toxic": []
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "train": {
+    "sentence_count": 3000,
+    "total_tokens": 47734,
+    "avg_tokens_per_sentence": 15.91,
+    "label_distribution": {
+      "O": 30205,
+      "B-ASPECT": 5300,
+      "B-SENTIMENT": 7264,
+      "I-SENTIMENT": 3249,
+      "I-ASPECT": 1716
+    }
+  },
+  "valid": {
+    "sentence_count": 1000,
+    "total_tokens": 16124,
+    "avg_tokens_per_sentence": 16.12,
+    "label_distribution": {
+      "B-ASPECT": 1741,
+      "I-ASPECT": 569,
+      "B-SENTIMENT": 2414,
+      "O": 10273,
+      "I-SENTIMENT": 1127
+    }
+  },
+  "test": {
+    "sentence_count": 1000,
+    "total_tokens": 15498,
+    "avg_tokens_per_sentence": 15.5,
+    "label_distribution": {
+      "B-ASPECT": 1758,
+      "B-SENTIMENT": 2384,
+      "O": 9706,
+      "I-ASPECT": 584,
+      "I-SENTIMENT": 1066
+    }
+  }
+}

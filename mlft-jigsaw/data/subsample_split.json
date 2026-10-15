@@ -1,0 +1,22 @@
+{
+  "method": "MultilabelStratifiedShuffleSplit",
+  "seed": 42,
+  "train_size": 1000,
+  "val_size": 300,
+  "train_distribution": {
+    "toxic": 9.6,
+    "severe_toxic": 1.0,
+    "obscene": 5.3,
+    "threat": 0.3,
+    "insult": 4.9,
+    "identity_hate": 0.9
+  },
+  "val_distribution": {
+    "toxic": 9.667,
+    "severe_toxic": 1.0,
+    "obscene": 5.333,
+    "threat": 0.333,
+    "insult": 5.0,
+    "identity_hate": 1.0
+  }
+}

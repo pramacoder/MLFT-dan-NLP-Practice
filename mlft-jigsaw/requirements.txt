@@ -1,0 +1,22 @@
+# Deep Learning & Transformers
+torch>=2.0.0
+transformers>=4.30.0
+accelerate>=0.20.0
+datasets>=2.14.0
+
+# Multi-label Stratification & ML
+scikit-learn>=1.2.0
+iterative-stratification>=0.1.9
+
+# Data & Visualization
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# GUI
+streamlit>=1.30.0
+
+# Utilities
+tqdm>=4.65.0
+requests>=2.30.0

@@ -1,0 +1,123 @@
+{
+  "validations": {
+    "missing_texts": 0,
+    "empty_texts": 0,
+    "duplicate_texts": 0,
+    "out_of_range_labels": {
+      "toxic": 0,
+      "severe_toxic": 0,
+      "obscene": 0,
+      "threat": 0,
+      "insult": 0,
+      "identity_hate": 0
+    },
+    "test_total_rows": 153164,
+    "test_unscored_minus_one_rows": 89186,
+    "test_unscored_minus_one_pct": 58.23,
+    "test_valid_scored_rows": 63978
+  },
+  "imbalance_and_cardinality": {
+    "total_reviews": 159571,
+    "clean_reviews_count": 143346,
+    "clean_reviews_pct": 89.83,
+    "toxic_reviews_count": 16225,
+    "toxic_reviews_pct": 10.17,
+    "label_cardinality_all": 0.22,
+    "label_cardinality_toxic_only": 2.16,
+    "label_frequencies": {
+      "toxic": 15294,
+      "severe_toxic": 1595,
+      "obscene": 8449,
+      "threat": 478,
+      "insult": 7877,
+      "identity_hate": 1405
+    },
+    "label_percentages": {
+      "toxic": 9.584,
+      "severe_toxic": 1.0,
+      "obscene": 5.295,
+      "threat": 0.3,
+      "insult": 4.936,
+      "identity_hate": 0.88
+    },
+    "rarest_label": "threat",
+    "rarest_label_pct": 0.3,
+    "most_common_label": "toxic",
+    "most_common_label_pct": 9.584
+  },
+  "length_and_truncation": {
+    "median_tokens": 52.0,
+    "mean_tokens": 93.8,
+    "truncation_pct_128": 18.78,
+    "truncation_pct_256": 6.54,
+    "truncation_pct_512": 1.9
+  },
+  "stratification": {
+    "toxic": {
+      "train_count": 13765,
+      "train_pct": 9.585,
+      "val_count": 1529,
+      "val_pct": 9.581,
+      "abs_diff_pct": 0.0034
+    },
+    "severe_toxic": {
+      "train_count": 1435,
+      "train_pct": 0.999,
+      "val_count": 160,
+      "val_pct": 1.003,
+      "abs_diff_pct": 0.0034
+    },
+    "obscene": {
+      "train_count": 7604,
+      "train_pct": 5.295,
+      "val_count": 845,
+      "val_pct": 5.295,
+      "abs_diff_pct": 0.0004
+    },
+    "threat": {
+      "train_count": 430,
+      "train_pct": 0.299,
+      "val_count": 48,
+      "val_pct": 0.301,
+      "abs_diff_pct": 0.0014
+    },
+    "insult": {
+      "train_count": 7089,
+      "train_pct": 4.936,
+      "val_count": 788,
+      "val_pct": 4.938,
+      "abs_diff_pct": 0.0018
+    },
+    "identity_hate": {
+      "train_count": 1264,
+      "train_pct": 0.88,
+      "val_count": 141,
+      "val_pct": 0.884,
+      "abs_diff_pct": 0.0034
+    }
+  },
+  "bias_cases": [
+    {
+      "category": "Identitas Agama / Etnis",
+      "example": "I am a proud Muslim and I love reading Wikipedia articles about world history.",
+      "risk": "Model yang overfitting pada kata 'Muslim' (yang sering muncul bersamaan dengan ujaran kebencian di data latih) dapat keliru memprediksi label identity_hate meskipun kalimat bernada positif/netral."
+    },
+    {
+      "category": "Orientasi Seksual",
+      "example": "Many gay and lesbian youth struggle with mental health and deserve our support.",
+      "risk": "Kata 'gay' dan 'lesbian' rentan memicu false positive pada label insult atau identity_hate jika model hanya mendeteksi kata kunci terisolasi tanpa memahami konteks afirmatif."
+    },
+    {
+      "category": "Slang / Bahasa Informal Positif",
+      "example": "That guitar solo was totally wicked and sick! Absolute killer performance.",
+      "risk": "Kata 'sick', 'wicked', dan 'killer' sering bermakna negatif dalam kamus harfiah, namun bernada pujian tinggi dalam bahasa gaul, berisiko memicu false positive toxic."
+    }
+  ],
+  "ml_decisions": {
+    "loss_function": "BCEWithLogitsLoss karena multi-label bukan multi-class saling lepas.",
+    "evaluation_metric": "Macro-F1 ditetapkan sebelum melihat test, untuk memastikan label langka (threat, severe_toxic) tidak tertutup oleh akurasi tinggi komentar bersih (89,8%).",
+    "max_length": "128 (atau 256 jika memori cukup) dipilih karena 86,4% ulasan berada di bawah 128 token, dan menghemat memori GPU secara drastis.",
+    "test_filtering": "89.186 baris berlabel -1 pada test_labels.csv wajib difilter keluar sebelum evaluasi akhir.",
+    "thresholding": "Threshold global dan per-label akan di-tune hanya pada validation split dengan kriteria Macro-F1 tertinggi."
+  }
+}

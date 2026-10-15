@@ -1,0 +1,62 @@
+{
+  "total_test_samples": 100,
+  "toxic_TP": 5,
+  "toxic_FN": 1,
+  "mean_words_fn_toxic": 305.0,
+  "fn_long_comments_ratio_gt_128_words": 100.0,
+  "test_eval_metrics": {
+    "Macro_F1": 0.25121252204585537,
+    "Micro_F1": 0.36923076923076925,
+    "Macro_Precision": 0.16468253968253968,
+    "Macro_Recall": 0.5555555555555556,
+    "Micro_Precision": 0.24,
+    "Micro_Recall": 0.8,
+    "Hamming_Loss": 0.06833333333333333,
+    "Per_Label": {
+      "toxic": {
+        "Precision": 0.23809523809523808,
+        "Recall": 0.8333333333333334,
+        "F1": 0.37037037037037035,
+        "Support": 6
+      },
+      "severe_toxic": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 0
+      },
+      "obscene": {
+        "Precision": 0.3,
+        "Recall": 0.75,
+        "F1": 0.42857142857142855,
+        "Support": 4
+      },
+      "threat": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "Support": 0
+      },
+      "insult": {
+        "Precision": 0.25,
+        "Recall": 0.75,
+        "F1": 0.375,
+        "Support": 4
+      },
+      "identity_hate": {
+        "Precision": 0.2,
+        "Recall": 1.0,
+        "F1": 0.3333333333333333,
+        "Support": 1
+      }
+    },
+    "Threshold": {
+      "toxic": 0.2,
+      "severe_toxic": 0.6,
+      "obscene": 0.4,
+      "threat": 0.45,
+      "insult": 0.3,
+      "identity_hate": 0.45
+    }
+  }
+}

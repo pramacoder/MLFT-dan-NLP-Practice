@@ -1,0 +1,9 @@
+{
+  "model_name": "distilroberta-base",
+  "max_len": 128,
+  "batch_size": 16,
+  "learning_rate": 2e-05,
+  "epochs": 3,
+  "weight_decay": 0.01,
+  "seed": 42
+}

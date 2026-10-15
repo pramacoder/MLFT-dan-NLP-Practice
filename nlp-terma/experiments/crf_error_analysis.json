@@ -1,0 +1,194 @@
+{
+  "error_counts": {
+    "missed_aspect": 228,
+    "missed_opinion": 219,
+    "aspect_sentiment_confusion": 19,
+    "false_span": 304,
+    "boundary_error": 118,
+    "negation_modifier_error": 25
+  },
+  "sample_examples": {
+    "missed_aspect": [
+      {
+        "sent_idx": 3,
+        "sentence": "kondisinya cukup baik , hanya dapatnya tempat yang paling atas sehingga lumayan juga pas membawa travel bag . karena tanpa ada lift .",
+        "missed_span": "ASPECT ('kondisinya')"
+      },
+      {
+        "sent_idx": 3,
+        "sentence": "kondisinya cukup baik , hanya dapatnya tempat yang paling atas sehingga lumayan juga pas membawa travel bag . karena tanpa ada lift .",
+        "missed_span": "ASPECT ('lift')"
+      },
+      {
+        "sent_idx": 7,
+        "sentence": "hotelnya seperti kurang terawat , baik exterior maupun interior . tolong diperbaiki lagi . terimakasih .",
+        "missed_span": "ASPECT ('hotelnya')"
+      },
+      {
+        "sent_idx": 9,
+        "sentence": "bantal keras dan tebal , gorden tidak bisa ditutup rapat , tidak ada air panas , keran rusak . tidak ada westafle . selimut kecil . dari luar , tidak seperti hotel . seperti kost . resepsionis berantakan . kalau room seperti ini paling tidak harga 120k . terimakasih .",
+        "missed_span": "ASPECT ('westafle')"
+      },
+      {
+        "sent_idx": 11,
+        "sentence": "sudah cukup baik . harga segitu cuma untuk istirahat sudah sangat bagus . hanya saja air hangatnya kurang berfungsi dengan baik .",
+        "missed_span": "ASPECT ('harga')"
+      }
+    ],
+    "missed_opinion": [
+      {
+        "sent_idx": 3,
+        "sentence": "kondisinya cukup baik , hanya dapatnya tempat yang paling atas sehingga lumayan juga pas membawa travel bag . karena tanpa ada lift .",
+        "missed_span": "SENTIMENT ('tanpa ada')"
+      },
+      {
+        "sent_idx": 5,
+        "sentence": "room bersih tetapi sayang linen kotor , bekas ada spot , kamar mandi bau , handuk sudah waktunya di ganti karena warnanya putih kehitaman , wifi susah ( sinyal ada tetapi tidak mau terhubung ) .",
+        "missed_span": "SENTIMENT ('putih kehitaman')"
+      },
+      {
+        "sent_idx": 5,
+        "sentence": "room bersih tetapi sayang linen kotor , bekas ada spot , kamar mandi bau , handuk sudah waktunya di ganti karena warnanya putih kehitaman , wifi susah ( sinyal ada tetapi tidak mau terhubung ) .",
+        "missed_span": "SENTIMENT ('bekas ada spot')"
+      },
+      {
+        "sent_idx": 9,
+        "sentence": "bantal keras dan tebal , gorden tidak bisa ditutup rapat , tidak ada air panas , keran rusak . tidak ada westafle . selimut kecil . dari luar , tidak seperti hotel . seperti kost . resepsionis berantakan . kalau room seperti ini paling tidak harga 120k . terimakasih .",
+        "missed_span": "SENTIMENT ('tidak ada')"
+      },
+      {
+        "sent_idx": 12,
+        "sentence": "acnya kurang dingin dan tv channel rata ngilang .",
+        "missed_span": "SENTIMENT ('ngilang')"
+      }
+    ],
+    "false_span": [
+      {
+        "sent_idx": 3,
+        "sentence": "kondisinya cukup baik , hanya dapatnya tempat yang paling atas sehingga lumayan juga pas membawa travel bag . karena tanpa ada lift .",
+        "false_span": "SENTIMENT ('lumayan')"
+      },
+      {
+        "sent_idx": 5,
+        "sentence": "room bersih tetapi sayang linen kotor , bekas ada spot , kamar mandi bau , handuk sudah waktunya di ganti karena warnanya putih kehitaman , wifi susah ( sinyal ada tetapi tidak mau terhubung ) .",
+        "false_span": "SENTIMENT ('tidak mau')"
+      },
+      {
+        "sent_idx": 5,
+        "sentence": "room bersih tetapi sayang linen kotor , bekas ada spot , kamar mandi bau , handuk sudah waktunya di ganti karena warnanya putih kehitaman , wifi susah ( sinyal ada tetapi tidak mau terhubung ) .",
+        "false_span": "SENTIMENT ('ada')"
+      },
+      {
+        "sent_idx": 6,
+        "sentence": "air hangat di bathroom tidak berfungsi , sudah complain tetapi tidak ada solusi , malam dan pagi mandi a .",
+        "false_span": "ASPECT ('bathroom')"
+      },
+      {
+        "sent_idx": 7,
+        "sentence": "hotelnya seperti kurang terawat , baik exterior maupun interior . tolong diperbaiki lagi . terimakasih .",
+        "false_span": "SENTIMENT ('baik')"
+      }
+    ],
+    "negation_modifier_error": [
+      {
+        "sent_idx": 13,
+        "sentence": "enak banget dapat sarapan , tetapi wifinya kurang kencang .",
+        "true_span": "SENTIMENT ('enak banget dapat')",
+        "pred_span": "SENTIMENT ('enak')",
+        "note": "Melibatkan penanda negasi / penguat opini"
+      },
+      {
+        "sent_idx": 70,
+        "sentence": "pilih kamar yang kasurnya muat 2 orang . awalnya bagus tetapi tengah malam listriknya habis dan disuruh pindah kamar yang kasurnya lebih kecil . tidak ada disediakan pouch yang isinya perlengkapan mandi . agak kecewa sebenarnya .",
+        "true_span": "SENTIMENT ('tidak ada disediakan')",
+        "pred_span": "SENTIMENT ('tidak ada')",
+        "note": "Melibatkan penanda negasi / penguat opini"
+      },
+      {
+        "sent_idx": 204,
+        "sentence": "kamarnya nyaman sekali tetapi sayang breakfast nya kurang menurutku .",
+        "true_span": "SENTIMENT ('kurang')",
+        "pred_span": "SENTIMENT ('kurang menurutku')",
+        "note": "Melibatkan penanda negasi / penguat opini"
+      },
+      {
+        "sent_idx": 303,
+        "sentence": "fasilitas parkir kendaraannya terlalu sedikit sampai harus di samping badan jalan raya , agak kurang aman .",
+        "true_span": "SENTIMENT ('terlalu sedikit')",
+        "pred_span": "SENTIMENT ('terlalu sedikit sampai')",
+        "note": "Melibatkan penanda negasi / penguat opini"
+      },
+      {
+        "sent_idx": 336,
+        "sentence": "kondisi kamar standar banget . saya sering menggunakan airy rooms . tetapi kali ini yang paling tidak nyaman . 1 . ac kurang dingin 2 . tidak ada snack 3 . heater water tidak berfungsi 4 . kamar biasa saja not recomended sih , kalau menurut saya .",
+        "true_span": "SENTIMENT ('tidak berfungsi')",
+        "pred_span": "SENTIMENT ('tidak berfungsi 4')",
+        "note": "Melibatkan penanda negasi / penguat opini"
+      }
+    ],
+    "boundary_error": [
+      {
+        "sent_idx": 18,
+        "sentence": "lokasi bagus tengah kota . kamar bersih hanya saja kamar mandi bau busuk , makanan biasa saja staf recepsionis tidak ramah , akses internet tidak ada dan kamar lantai 3 tidak ada lift .",
+        "true_span": "SENTIMENT ('biasa')",
+        "pred_span": "SENTIMENT ('biasa saja')"
+      },
+      {
+        "sent_idx": 18,
+        "sentence": "lokasi bagus tengah kota . kamar bersih hanya saja kamar mandi bau busuk , makanan biasa saja staf recepsionis tidak ramah , akses internet tidak ada dan kamar lantai 3 tidak ada lift .",
+        "true_span": "ASPECT ('staf recepsionis')",
+        "pred_span": "ASPECT ('staf')"
+      },
+      {
+        "sent_idx": 25,
+        "sentence": "tempat yang baik hanya wifi sedang rusak waktu saat menginap .",
+        "true_span": "SENTIMENT ('rusak')",
+        "pred_span": "SENTIMENT ('sedang rusak')"
+      },
+      {
+        "sent_idx": 26,
+        "sentence": "mantap , rapi , ada snacknya air mineral , ac dingin banget , ada water heater buat mandi .",
+        "true_span": "ASPECT ('snacknya')",
+        "pred_span": "ASPECT ('snacknya air mineral')"
+      },
+      {
+        "sent_idx": 26,
+        "sentence": "mantap , rapi , ada snacknya air mineral , ac dingin banget , ada water heater buat mandi .",
+        "true_span": "ASPECT ('air mineral')",
+        "pred_span": "ASPECT ('snacknya air mineral')"
+      }
+    ],
+    "aspect_sentiment_confusion": [
+      {
+        "sent_idx": 18,
+        "sentence": "lokasi bagus tengah kota . kamar bersih hanya saja kamar mandi bau busuk , makanan biasa saja staf recepsionis tidak ramah , akses internet tidak ada dan kamar lantai 3 tidak ada lift .",
+        "true_span": "ASPECT ('staf recepsionis')",
+        "pred_span": "SENTIMENT ('recepsionis')"
+      },
+      {
+        "sent_idx": 42,
+        "sentence": "lantai kamar mandi licin , tidak disediakan shower cap , pintu kamar mandi gagangnya berat/sulit diputar khawatir tidak bisa dibuka/terkunci dari dalam , alangkah baiknya disediakan petunjuk arah kiblat di dalam kamar .",
+        "true_span": "ASPECT ('shower cap')",
+        "pred_span": "SENTIMENT ('cap')"
+      },
+      {
+        "sent_idx": 73,
+        "sentence": "pelayanan ramah , namun air panas shower perlu diperbaiki .",
+        "true_span": "ASPECT ('air panas shower')",
+        "pred_span": "SENTIMENT ('panas')"
+      },
+      {
+        "sent_idx": 118,
+        "sentence": "hotel bagus dan pemandanganya juga bagus . tetapi kusus buat kamat airynya benarbenar berbeda sekali dengan kamar lainya , kamar airynya banyak sarang labalaba tempat tidur yang sudah tidak nyaman karena pernya berasa banget dibadan dan sudah miringmiring , ac dikamat juga tidak dingin apa lagi kamar tidak ada ventilasi sama sekali jadi semakin berasa pengap .",
+        "true_span": "SENTIMENT ('benarbenar berbeda sekali dengan kamar lainya')",
+        "pred_span": "ASPECT ('kamar lainya')"
+      },
+      {
+        "sent_idx": 228,
+        "sentence": "memuaskan , sendok sama garpu nya kurang bersih .",
+        "true_span": "ASPECT ('sendok')",
+        "pred_span": "SENTIMENT ('sendok')"
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "best_experiment": "exp5_head_tail",
+  "model_name": "distilroberta-base",
+  "max_length": 128,
+  "head_tail_truncation": true,
+  "learning_rate": 3e-05,
+  "epochs": 2,
+  "use_pos_weight": true,
+  "per_class_thresholds": {
+    "toxic": 0.2,
+    "severe_toxic": 0.6,
+    "obscene": 0.4,
+    "threat": 0.45,
+    "insult": 0.3,
+    "identity_hate": 0.45
+  },
+  "val_macro_f1_adaptive_threshold": 0.44710832905671244,
+  "val_micro_f1": 0.5384615384615384,
+  "val_metrics_at_best_thresholds": {
+    "Macro_F1": 0.44710832905671244,
+    "Micro_F1": 0.5384615384615384,
+    "Macro_Precision": 0.33119785898855664,
+    "Macro_Recall": 0.9059865900383142,
+    "Micro_Precision": 0.3971631205673759,
+    "Micro_Recall": 0.835820895522388,
+    "Hamming_Loss": 0.05333333333333334,
+    "Per_Label": {
+      "toxic": {
+        "Precision": 0.5581395348837209,
+        "Recall": 0.8275862068965517,
+        "F1": 0.6666666666666666,
+        "Support": 29
+      },
+      "severe_toxic": {
+        "Precision": 0.16666666666666666,
+        "Recall": 1.0,
+        "F1": 0.2857142857142857,
+        "Support": 3
+      },
+      "obscene": {
+        "Precision": 0.56,
+        "Recall": 0.875,
+        "F1": 0.6829268292682927,
+        "Support": 16
+      },
+      "threat": {
+        "Precision": 0.16666666666666666,
+        "Recall": 1.0,
+        "F1": 0.2857142857142857,
+        "Support": 1
+      },
+      "insult": {
+        "Precision": 0.39285714285714285,
+        "Recall": 0.7333333333333333,
+        "F1": 0.5116279069767442,
+        "Support": 15
+      },
+      "identity_hate": {
+        "Precision": 0.14285714285714285,
+        "Recall": 1.0,
+        "F1": 0.25,
+        "Support": 3
+      }
+    },
+    "Threshold": {
+      "toxic": 0.2,
+      "severe_toxic": 0.6,
+      "obscene": 0.4,
+      "threat": 0.45,
+      "insult": 0.3,
+      "identity_hate": 0.45
+    }
+  },
+  "seed": 42,
+  "version": "v2_improved",
+  "status": "FROZEN_FOR_TEST_EVALUATION"
+}

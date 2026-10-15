@@ -1,0 +1,37 @@
+{
+  "train": {
+    "total_rows": 159571,
+    "label_columns": [
+      "toxic",
+      "severe_toxic",
+      "obscene",
+      "threat",
+      "insult",
+      "identity_hate"
+    ],
+    "clean_comments_count": 143346,
+    "toxic_comments_count": 16225,
+    "label_sums": {
+      "toxic": 15294,
+      "severe_toxic": 1595,
+      "obscene": 8449,
+      "threat": 478,
+      "insult": 7877,
+      "identity_hate": 1405
+    }
+  },
+  "test": {
+    "total_rows": 153164,
+    "test_labels_total_rows": 153164,
+    "unscored_rows_with_minus_one": 89186,
+    "valid_scored_rows": 63978,
+    "valid_test_label_sums": {
+      "toxic": 6090,
+      "severe_toxic": 367,
+      "obscene": 3691,
+      "threat": 211,
+      "insult": 3427,
+      "identity_hate": 712
+    }
+  }
+}

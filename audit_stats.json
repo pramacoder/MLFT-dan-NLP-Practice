@@ -1,0 +1,171 @@
+{
+  "terma_marker_stats": {
+    "sangat": {
+      "total": 384,
+      "sentiment_count": 356,
+      "sentiment_pct": 92.71,
+      "O_count": 28,
+      "O_pct": 7.29,
+      "aspect_count": 0,
+      "aspect_pct": 0.0,
+      "breakdown": {
+        "B-SENTIMENT": 346,
+        "O": 28,
+        "I-SENTIMENT": 10
+      }
+    },
+    "banget": {
+      "total": 215,
+      "sentiment_count": 180,
+      "sentiment_pct": 83.72,
+      "O_count": 34,
+      "O_pct": 15.81,
+      "aspect_count": 1,
+      "aspect_pct": 0.47,
+      "breakdown": {
+        "I-SENTIMENT": 180,
+        "O": 34,
+        "I-ASPECT": 1
+      }
+    },
+    "tidak": {
+      "total": 1217,
+      "sentiment_count": 844,
+      "sentiment_pct": 69.35,
+      "O_count": 373,
+      "O_pct": 30.65,
+      "aspect_count": 0,
+      "aspect_pct": 0.0,
+      "breakdown": {
+        "B-SENTIMENT": 819,
+        "O": 373,
+        "I-SENTIMENT": 25
+      }
+    },
+    "kurang": {
+      "total": 465,
+      "sentiment_count": 434,
+      "sentiment_pct": 93.33,
+      "O_count": 31,
+      "O_pct": 6.67,
+      "aspect_count": 0,
+      "aspect_pct": 0.0,
+      "breakdown": {
+        "B-SENTIMENT": 416,
+        "O": 31,
+        "I-SENTIMENT": 18
+      }
+    }
+  },
+  "jigsaw_label_truncation": {
+    "toxic": {
+      "n_pos": 15294,
+      "median_len": 36.0,
+      "mean_len": 84.34,
+      "trunc_128_pct": 11.98,
+      "trunc_256_pct": 4.8
+    },
+    "severe_toxic": {
+      "n_pos": 1595,
+      "median_len": 30.0,
+      "mean_len": 146.72,
+      "trunc_128_pct": 14.17,
+      "trunc_256_pct": 9.78
+    },
+    "obscene": {
+      "n_pos": 8449,
+      "median_len": 33.0,
+      "mean_len": 84.13,
+      "trunc_128_pct": 11.3,
+      "trunc_256_pct": 4.85
+    },
+    "threat": {
+      "n_pos": 478,
+      "median_len": 35.5,
+      "mean_len": 96.91,
+      "trunc_128_pct": 10.88,
+      "trunc_256_pct": 5.23
+    },
+    "insult": {
+      "n_pos": 7877,
+      "median_len": 34.0,
+      "mean_len": 81.66,
+      "trunc_128_pct": 10.65,
+      "trunc_256_pct": 4.24
+    },
+    "identity_hate": {
+      "n_pos": 1405,
+      "median_len": 35.0,
+      "mean_len": 95.51,
+      "trunc_128_pct": 13.17,
+      "trunc_256_pct": 5.77
+    }
+  },
+  "jigsaw_gay_stats": {
+    "total_occurrences": 867,
+    "pct_of_all_train": 0.543,
+    "clean_count": 352,
+    "clean_pct": 40.6,
+    "toxic_any_count": 515,
+    "toxic_any_pct": 59.4,
+    "label_breakdown": {
+      "toxic": 499,
+      "severe_toxic": 72,
+      "obscene": 250,
+      "threat": 18,
+      "insult": 282,
+      "identity_hate": 265
+    },
+    "label_percentages": {
+      "toxic": 57.55,
+      "severe_toxic": 8.3,
+      "obscene": 28.84,
+      "threat": 2.08,
+      "insult": 32.53,
+      "identity_hate": 30.57
+    }
+  },
+  "feats_token0": {
+    "bias": 1.0,
+    "word.lower()": "kamar",
+    "word[-3:]": "mar",
+    "word[-2:]": "ar",
+    "word[:3]": "kam",
+    "word[:2]": "ka",
+    "word.isupper()": false,
+    "word.istitle()": false,
+    "word.isdigit()": false,
+    "word.shape": "xxxxx",
+    "is_negation": false,
+    "is_intensifier": false,
+    "BOS": true,
+    "+1:word.lower()": "mandi",
+    "+1:word.istitle()": false,
+    "+1:word.isupper()": false,
+    "+1:word.shape": "xxxxx"
+  },
+  "feats_token2": {
+    "bias": 1.0,
+    "word.lower()": "sangat",
+    "word[-3:]": "gat",
+    "word[-2:]": "at",
+    "word[:3]": "san",
+    "word[:2]": "sa",
+    "word.isupper()": false,
+    "word.istitle()": false,
+    "word.isdigit()": false,
+    "word.shape": "xxxxxx",
+    "is_negation": false,
+    "is_intensifier": true,
+    "-1:word.lower()": "mandi",
+    "-1:word.istitle()": false,
+    "-1:word.isupper()": false,
+    "-1:word.shape": "xxxxx",
+    "-1:is_negation": false,
+    "-1:is_intensifier": false,
+    "+1:word.lower()": "bersih",
+    "+1:word.istitle()": false,
+    "+1:word.isupper()": false,
+    "+1:word.shape": "xxxxxx"
+  }
+}
